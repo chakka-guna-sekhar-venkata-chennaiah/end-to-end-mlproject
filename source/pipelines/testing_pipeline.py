@@ -10,8 +10,8 @@ class prediction_pipeline:
 
     def predict(self,features):
         try:
-            model_path='artifacts/models.pkl'
-            preprocessor_path='artifacts.pkl'
+            model_path='artifacts/model.pkl'
+            preprocessor_path='artifacts\preprocessor.pkl'
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
             data_scaling=preprocessor.transform(features)
@@ -49,6 +49,6 @@ class custom_data:
 
             }
 
-            return pd.dataframe(custom_data_input_dict)
+            return pd.DataFrame(custom_data_input_dict)
         except Exception as e:
             raise custom_exception(e,sys)

@@ -24,10 +24,10 @@ st.write("""
     """)
 
 st.subheader('Enter Form')
-sepal_length = st.number_input('Enter the Sepal Length',min_value=0,max_value=10.0)
-sepal_width = st.number_input('Enter the Sepal Length', min_value=0,max_value=10.0)
-petal_length = st.number_input('Enter the Sepal Length', min_value=0,max_value=10.0)
-petal_width= st.number_input('Enter the Sepal Length', min_value=0,max_value=10.0)
+sepal_length = st.number_input('Enter the Sepal Length')
+sepal_width = st.number_input('Enter the Sepal Width')
+petal_length = st.number_input('Enter the Petal Length')
+petal_width= st.number_input('Enter the Petal Width')
 
 data=custom_data(sepal_length,sepal_width,petal_length,petal_width)
 pred_df=data.get_data_as_a_dataframe()
@@ -37,9 +37,12 @@ final_pred=pred_pipe.predict(pred_df)
 
 if st.button('Prdict'):
     if final_pred[0]==0:
-        st.write('According to your information, the predicted species is Iris Setosa')
+        st.write('According to your information, the predicted specie is as follows:-')
+        st.image('iris-setosa.png',use_column_width=True)
     elif final_pred[0]==1:
+        
         st.write('According to your information, the predicted species is Iris Versicolor')
+        st.image('iris-versicolor.jpeg',use_column_width=True)
     elif final_pred[0]==2:
         st.write('According to your information, the predicted species is Iris Virginica')
-
+        st.image('iris-virginica.png'.use_column_width=True)
