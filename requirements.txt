@@ -1,0 +1,7 @@
+streamlit
+scikit-image
+scikit-learn
+pandas
+numpy
+dill
+-e .
