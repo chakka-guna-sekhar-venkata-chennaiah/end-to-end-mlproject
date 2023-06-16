@@ -35,7 +35,7 @@ pred_df=data.get_data_as_a_dataframe()
 pred_pipe=prediction_pipeline()
 final_pred=pred_pipe.predict(pred_df)
 
-if st.button('Prdict'):
+if st.button('Predict'):
     if final_pred[0]==0:
         st.write('According to your information, the predicted specie is as follows:-')
         st.image('iris-setosa.png',use_column_width=True)
@@ -45,4 +45,4 @@ if st.button('Prdict'):
         st.image('iris-versicolor.jpeg',use_column_width=True)
     elif final_pred[0]==2:
         st.write('According to your information, the predicted species is Iris Virginica')
-        st.image('iris-virginica.png'.use_column_width=True)
+        st.image('iris-virginica.png',use_column_width=True)
