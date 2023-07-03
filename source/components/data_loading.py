@@ -23,7 +23,7 @@ class dataloading:
     def initiate_data_loading(self):
         logging.info('Data loading is started')
         try:
-            df=pd.read_csv('notebook/IRIS.csv')
+            df=pd.read_csv('notebook/IRIS_1.csv')
             df['species']=df['species'].replace({'Iris-setosa':0,
                                                 'Iris-versicolor':1,
                                                 'Iris-virginica':2})

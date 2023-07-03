@@ -120,7 +120,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.artifacts
+
 .End_to_End_Machine_Learning_Industry_level_Project.egg-info
 .logs
 .env
