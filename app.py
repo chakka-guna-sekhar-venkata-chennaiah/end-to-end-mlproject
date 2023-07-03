@@ -1,6 +1,6 @@
 import streamlit as st
 from source.pipelines.testing_pipeline import custom_data,prediction_pipeline 
-st.title("Iris Species Detection using ML")
+st.title("Iris species classification using Machine Learning ")
 
 
 st.image("static/main.jpeg", use_column_width=True)
@@ -27,7 +27,7 @@ final_pred=pred_pipe.predict(pred_df)
 
 if st.button('Predict'):
     if final_pred[0]==0:
-        st.write("Based on the data, the most likely species of flower is Iris setosa.")
+        st.write("Based on the data, the most likely species of flower is Iris Setosa.")
         st.image('static/iris-setosa.png',use_column_width=True)
     elif final_pred[0]==1:
         st.write("Based on the data, the most likely species of flower is Iris Versicolor.")
